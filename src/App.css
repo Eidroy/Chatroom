@@ -1,0 +1,294 @@
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #494d5f;
+  color: #d0bdf4;
+
+  button {
+    color: #a0d2eb;
+    background-color: #8458b3;
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+  }
+  button:hover {
+    background-color: #8458b35b;
+  }
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .Home-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 25vw;
+  }
+}
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    margin-top: 1rem;
+  }
+  input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.Register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    margin-top: 1rem;
+  }
+  input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  button {
+    margin-top: 1rem;
+  }
+}
+
+.Userlist {
+  color: black;
+}
+
+.Users {
+  color: black;
+}
+
+.Createlobby {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.Dashboard-top {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 5vh;
+}
+
+.Lobbylist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+    margin-top: 1rem;
+  }
+  input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.Lobby {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Chat {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .Sendbtn {
+    margin-top: 1rem;
+  }
+}
+
+.Chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 65vh;
+  width: 100vw;
+  overflow-y: scroll;
+  align-items: center;
+}
+
+.Chatbuttons {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+  margin-bottom: 1rem;
+}
+
+.Message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 10px;
+  background-color: #d0bdf4;
+  color: #494d5f;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.Messagebuttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Private {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.Recieved {
+  right: 75px;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: #a0d2eb;
+  color: #494d5f;
+  border-radius: 10px;
+}
+
+.Recieved::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #a0d2eb;
+}
+
+.Send {
+  margin-bottom: 1rem;
+  position: relative;
+  left: 75px;
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: #8458b3;
+  color: #d0bdf4;
+  border-radius: 10px;
+}
+
+.Send::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #8458b3 transparent transparent;
+}
+
+.Private-list {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  width: 25vw;
+  overflow-y: scroll;
+  align-items: center;
+  div {
+    width: 50%;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  height: 50vh;
+}
+
+.Private-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.Private-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  input {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
