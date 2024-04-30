@@ -110,15 +110,7 @@ const Private = () => {
                 }
                 key={message.id}
               >
-                {message.sender_id == localStorage.getItem("id")
-                  ? message.sender_username + " says"
-                  : message.sender_username + " says"}
-                <br></br>
                 {message.message}
-                <br></br>
-                {message.sender_id == localStorage.getItem("id")
-                  ? "To " + message.reciever_username
-                  : "To " + " You"}
               </div>
             ))}
           </div>
