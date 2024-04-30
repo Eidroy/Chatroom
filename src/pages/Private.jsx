@@ -114,7 +114,7 @@ const Private = () => {
               </div>
             ))}
           </div>
-          <div className="Private-input">
+          <div className="Input">
             <input
               type="text"
               placeholder="Enter message"

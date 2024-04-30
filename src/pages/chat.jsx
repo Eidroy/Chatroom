@@ -239,14 +239,16 @@ const Chat = () => {
           </div>
         ))}
       </div>
-      <input
-        type="text"
-        placeholder="Type your message..."
-        onChange={(e) => setMessage(e.target.value)}
-      />
-      <button className="Sendbtn" onClick={() => handleSendMessage(message)}>
-        Send
-      </button>
+      <div className="Input">
+        <input
+          type="text"
+          placeholder="Type your message..."
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <button className="Sendbtn" onClick={() => handleSendMessage(message)}>
+          Send
+        </button>
+      </div>
     </div>
   );
 };

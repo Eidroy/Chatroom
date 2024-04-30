@@ -154,14 +154,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  input {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  .Sendbtn {
-    margin-top: 1rem;
-  }
 }
 
 .Chat-container {
@@ -282,7 +274,7 @@
   gap: 10px;
 }
 
-.Private-input {
+.Input {
   display: flex;
   flex-direction: column;
   gap: 10px;
