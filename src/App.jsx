@@ -40,7 +40,7 @@ function App() {
           <>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/chat" element={<Chat />} />
-            <Route path="/private_messages" element={<Private />} />
+            <Route path="/private-messages" element={<Private />} />
           </>
         )}
       </Routes>
