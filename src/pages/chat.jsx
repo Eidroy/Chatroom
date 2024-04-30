@@ -28,6 +28,7 @@ const Chat = () => {
           }
         );
         const data = await response.json();
+        console.log(data);
         const sortedMessages = data.rows.sort(
           (a, b) => a.message_id - b.message_id
         );
@@ -215,6 +216,8 @@ const Chat = () => {
     }
   };
 
+  const teamName = localStorage.getItem("teamName");
+
   return (
     <div className="Chat">
       <div className="Chatbuttons">
@@ -222,7 +225,7 @@ const Chat = () => {
         <button onClick={handleRemoveUser}>Remove User</button>
         <UserList />
       </div>
-      <h1>Chat</h1>
+      <h1>{teamName}</h1>
       <div ref={listRef} className="Chat-container">
         {messages.map((message, index) => (
           <div className="Message" key={index}>

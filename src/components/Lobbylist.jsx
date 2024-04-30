@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 
-const handleJoin = (lobbyid) => {
+const handleJoin = (lobbyid, teamName) => {
   window.location.href = "/chat";
   localStorage.setItem("lobbyid", lobbyid);
+  localStorage.setItem("teamName", teamName);
 };
 
 const LobbyList = () => {
@@ -40,7 +41,9 @@ const LobbyList = () => {
       {lobbies.map((lobby) => (
         <div className="Lobby" key={lobby.teamId}>
           <h3>{lobby.teamName}</h3>
-          <button onClick={() => handleJoin(lobby.teamId)}>Chat</button>
+          <button onClick={() => handleJoin(lobby.teamId, lobby.teamName)}>
+            Chat
+          </button>
         </div>
       ))}
     </div>
