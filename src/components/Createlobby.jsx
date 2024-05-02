@@ -24,7 +24,7 @@ function CreateLobby() {
       .catch((error) => {
         console.error("Error creating lobby:", error);
       });
-    window.location.reload();
+    // window.location.reload();
   };
 
   const handleLobbyNameChange = (event) => {
