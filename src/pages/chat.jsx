@@ -127,7 +127,7 @@ const Chat = () => {
     const newMessage = prompt("Enter the new message:");
     try {
       const response = await fetch(
-        `https://lockerroom-7dd0015188c2.herokuapp.comd0015188c2.herokuapp.com/message/${messageId}`,
+        `https://lockerroom-7dd0015188c2.herokuapp.com/message/${messageId}`,
         {
           method: "PATCH",
           headers: {
@@ -161,7 +161,7 @@ const Chat = () => {
     );
     try {
       const response = await fetch(
-        `https://lockerroom-7dd0015188c2.herokuapp.comd0015188c2.herokuapp.com/lobby/${lobbyid}/add-user`,
+        `https://lockerroom-7dd0015188c2.herokuapp.com/lobby/${lobbyid}/add-user`,
         {
           method: "POST",
           headers: {
