@@ -114,6 +114,11 @@ const Private = () => {
               {user.username}
             </button>
           ))}
+          <input
+            type="text"
+            placeholder="Enter username of user to message"
+            onChange={(e) => setSelectedUser({ username: e.target.value })}
+          />
         </div>
         <div className="Private-chat">
           <div ref={listRef} className="Private-list">
@@ -135,11 +140,6 @@ const Private = () => {
               type="text"
               placeholder="Enter message"
               onChange={(e) => setMessageInput(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Enter username"
-              onChange={(e) => setSelectedUser({ username: e.target.value })}
             />
             <button onClick={handleSendpm}>Send</button>
           </div>
