@@ -38,8 +38,12 @@ const Login = () => {
         const id = data.id;
         localStorage.setItem("token", token);
         localStorage.setItem("id", id);
-        console.log(id, token);
-        window.location.href = "/dashboard";
+        if (id.length > 0) {
+          console.log(id, token);
+          window.location.href = "/dashboard";
+        } else {
+          alert("Invalid username or password");
+        }
       })
       .catch((error) => {
         console.error(error);

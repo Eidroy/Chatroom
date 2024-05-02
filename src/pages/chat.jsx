@@ -161,7 +161,7 @@ const Chat = () => {
     );
     try {
       const response = await fetch(
-        `https://lockerroom-7dd0015188c2.herokuapp.com/lobby/${lobbyid}/add-user`,
+        `http://localhost:3000/lobby/${lobbyid}/add-user`,
         {
           method: "POST",
           headers: {
