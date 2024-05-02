@@ -25,8 +25,6 @@ const LobbyList = () => {
         );
         const data = await response.json();
         console.log(data);
-        const username = data[0].userName;
-        localStorage.setItem("username", username);
         setLobbies(data);
       } catch (error) {
         console.error("Error fetching lobbies:", error);
