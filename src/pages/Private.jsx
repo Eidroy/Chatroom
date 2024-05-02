@@ -82,7 +82,7 @@ const Private = () => {
   const handleSendpm = async () => {
     const token = localStorage.getItem("token");
     const username = localStorage.getItem("username");
-    const reciever = selectedUser.username;
+    const reciever_username = selectedUser.username;
     const message = messageInput;
     const response = await fetch(
       "https://lockerroom-7dd0015188c2.herokuapp.com/message/private-message",
@@ -93,7 +93,7 @@ const Private = () => {
           Authorization: token,
         },
         body: JSON.stringify({
-          reciever_username: reciever,
+          reciever_username,
           message,
           username,
         }),
