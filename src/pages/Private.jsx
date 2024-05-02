@@ -42,11 +42,16 @@ const Private = () => {
               (user) => user.username === message.reciever_username
             ))
         ) {
-          uniqueUsers.push({
-            id: message.sender_id,
-            username: message.sender_username,
-          });
-          if (message.sender_username !== message.reciever_username) {
+          if (message.sender_username !== username) {
+            uniqueUsers.push({
+              id: message.sender_id,
+              username: message.sender_username,
+            });
+          }
+          if (
+            message.sender_username !== message.reciever_username &&
+            message.reciever_username !== username
+          ) {
             uniqueUsers.push({
               id: message.reciever_id,
               username: message.reciever_username,
