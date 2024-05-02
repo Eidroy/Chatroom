@@ -38,6 +38,7 @@ const Login = () => {
         const id = data.id;
         localStorage.setItem("token", token);
         localStorage.setItem("id", id);
+        localStorage.setItem("username", data.username);
         if (id != undefined && token != undefined) {
           console.log(id, token);
           window.location.href = "/dashboard";
