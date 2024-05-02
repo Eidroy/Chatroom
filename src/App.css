@@ -251,7 +251,7 @@
 .Private-list {
   display: flex;
   flex-direction: column;
-  height: 75vh;
+  height: 70vh;
   width: 25vw;
   overflow-y: scroll;
   align-items: center;
