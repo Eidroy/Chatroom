@@ -265,6 +265,7 @@
   flex-direction: column;
   gap: 10px;
   justify-content: flex-start;
+  overflow-y: scroll;
   input {
     font-size: 1rem;
     height: 2rem;
