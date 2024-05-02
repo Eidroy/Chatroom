@@ -33,9 +33,9 @@ const Private = () => {
 
       const users = await sortedMessages.reduce((uniqueUsers, message) => {
         if (
-          message.reciever_username !== username &&
+          message.reciever_username != username &&
           !uniqueUsers.some(
-            (user) => user.username === message.reciever_username
+            (user) => user.username == message.reciever_username
           )
         ) {
           uniqueUsers.push({
