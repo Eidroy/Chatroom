@@ -31,7 +31,7 @@ const Private = () => {
       const sortedMessages = data.sort((a, b) => a.id - b.id);
       setOriginalMessages(sortedMessages);
 
-      const users = sortedMessages.reduce((uniqueUsers, message) => {
+      const users = await sortedMessages.reduce((uniqueUsers, message) => {
         if (
           message.reciever_username !== username &&
           !uniqueUsers.some(
