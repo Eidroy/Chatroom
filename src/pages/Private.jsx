@@ -46,6 +46,7 @@ const Private = () => {
         return uniqueUsers;
       }, []);
 
+      console.log(users);
       setUsers(users);
     };
 
