@@ -116,7 +116,7 @@ const Private = () => {
           ))}
           <input
             type="text"
-            placeholder="Enter username of user to message"
+            placeholder="Enter username to contact"
             onChange={(e) => setSelectedUser({ username: e.target.value })}
           />
         </div>

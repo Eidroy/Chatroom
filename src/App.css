@@ -201,7 +201,7 @@
 }
 
 .Recieved {
-  right: 75px;
+  right: 20%;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
@@ -227,7 +227,7 @@
 .Send {
   margin-bottom: 1rem;
   position: relative;
-  left: 75px;
+  left: 20%;
   display: inline-block;
   padding: 0.5rem;
   background-color: #8458b3;
@@ -251,8 +251,8 @@
 .Private-list {
   display: flex;
   flex-direction: column;
-  height: 70vh;
-  width: 25vw;
+  height: 75vh;
+  width: 30vw;
   overflow-y: scroll;
   align-items: center;
   div {
@@ -265,7 +265,10 @@
   flex-direction: column;
   gap: 10px;
   justify-content: flex-start;
-  height: 50vh;
+  input {
+    font-size: 1rem;
+    height: 2rem;
+  }
 }
 
 .Private-container {
