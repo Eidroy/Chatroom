@@ -1,12 +1,15 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, createContext, useContext } from "react";
 
-const Private = () => {
+const PrivateContext = createContext();
+
+const PrivateProvider = ({ children }) => {
   const [messages, setMessages] = useState([]);
   const [originalMessages, setOriginalMessages] = useState([]);
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [messageInput, setMessageInput] = useState("");
   const listRef = useRef();
+
   useEffect(() => {
     if (listRef.current) {
       listRef.current.scrollTo(0, listRef.current.scrollHeight);
@@ -89,6 +92,39 @@ const Private = () => {
     window.location.reload();
   };
 
+  // Provide the messages and users to the child components
+  return (
+    <PrivateContext.Provider
+      value={{
+        messages,
+        users,
+        selectedUser,
+        messageInput,
+        listRef,
+        handleUserClick,
+        handleSendpm,
+        setMessageInput,
+        setSelectedUser,
+      }}
+    >
+      {children}
+    </PrivateContext.Provider>
+  );
+};
+
+const Private = () => {
+  const {
+    messages,
+    users,
+    selectedUser,
+    messageInput,
+    listRef,
+    handleUserClick,
+    handleSendpm,
+    setMessageInput,
+    setSelectedUser,
+  } = useContext(PrivateContext);
+
   return (
     <div className="Private">
       <h1>Private Messages</h1>
@@ -134,4 +170,8 @@ const Private = () => {
   );
 };
 
-export default Private;
+export default () => (
+  <PrivateProvider>
+    <Private />
+  </PrivateProvider>
+);
