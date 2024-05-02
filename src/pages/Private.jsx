@@ -33,12 +33,19 @@ const Private = () => {
 
       const users = await sortedMessages.reduce((uniqueUsers, message) => {
         if (
-          message.reciever_username != username ||
-          (message.sender_username != username &&
+          (message.sender_username !== username &&
             !uniqueUsers.some(
-              (user) => user.username == message.reciever_username
+              (user) => user.username === message.sender_username
+            )) ||
+          (message.reciever_username !== username &&
+            !uniqueUsers.some(
+              (user) => user.username === message.reciever_username
             ))
         ) {
+          uniqueUsers.push({
+            id: message.sender_id,
+            username: message.sender_username,
+          });
           uniqueUsers.push({
             id: message.reciever_id,
             username: message.reciever_username,
