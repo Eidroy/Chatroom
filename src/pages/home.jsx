@@ -15,6 +15,9 @@ function Home() {
         <button onClick={handleLogin}>Login</button>
         <button onClick={handleRegister}>Register</button>
       </section>
+      <a className="Source" href="https://github.com/Eidroy/Chatroom">
+        Source Code
+      </a>
     </div>
   );
 }
