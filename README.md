@@ -19,3 +19,13 @@ Still need to make some styling changes to make it look better \
 Need to look more into context and nav to make the app a more one-pager \
 Get rid of the window.location.href's and reload's \
 Work more with component's and split my code instead of doing most of the work in pages
+
+### List of Technologies
+
+I used Vite and React
+To run the project locally , u clone the repo , open it in your code editor and run
+
+```
+npm install
+npm run dev
+```
